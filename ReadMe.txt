@@ -9,4 +9,4 @@ To create this project, first install
     8. axios - easy to make a request using express
 
 by typing following command
-    
+    npm -i express morrgan nodemon ejs body-parser dotenv mongoose axios

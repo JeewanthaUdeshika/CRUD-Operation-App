@@ -10,3 +10,20 @@ To create this project, first install
 
 by typing following command
     npm -i express morrgan nodemon ejs body-parser dotenv mongoose axios
+
+Set nodemon in start element in package.json
+
+Then  make folder structure (project structure)
+    1. assets
+        img
+        js
+        css.
+    2. views with all html  files.
+    3. server witth all the server side files,
+        controller (resourses to the user)
+        model (all the schems with mongo)
+        databse
+        routes
+        services
+
+To make configs in secure, we have to make config.env file

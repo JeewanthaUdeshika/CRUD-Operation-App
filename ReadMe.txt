@@ -27,3 +27,8 @@ Then  make folder structure (project structure)
         services
 
 To make configs in secure, we have to make config.env file
+
+Here the MongoDB Atlas is used as a cloud server
+    * To use it, first create project and then create cluster by adding username and password
+    * Then in network access tab, add  IP  address of user (if you allow anyone to access use anywhere button)
+    * Then after going to clusters, connect to the application by copy the link and paste it to the config.env with variable

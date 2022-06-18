@@ -6,11 +6,17 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 
+const connectDB = require('./server/database/connection');
+
 dotenv.config({path: 'config.env'});    // For secure the credentials
 const PORT = process.env.PORT || 8080;  // Make the PORT variable
 
 // Log request to get request details in the console
 app.use(morgan('tiny'));
+
+// Connect the mongoDB server
+connectDB();
+
 // Parse request to body-parser
 app.use(bodyParser.urlencoded({extended: true}));
 // Set view engine

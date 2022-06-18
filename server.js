@@ -21,9 +21,21 @@ app.use('/css', express.static(path.resolve(__dirname, "assets/css")));     // N
 app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 
+// route for home
 app.get('/', (req, res)=>{
     res.render("index");
 });
+
+// Route for new user
+app.get('/add_user', (req, res)=>{
+    res.render("add_user");
+});
+
+// Route for update user
+app.get('/update_user', (req, res)=>{
+    res.render("update_user");
+});
+
 
 app.listen(PORT, ()=>{
     console.log(`Server running on http://localhost:${PORT}`);

@@ -1,12 +1,13 @@
-
+<% for (var i=0; i<users.length; i++){%>
 <tr>
-    <td>1</td>
-    <td>UserName</td>
-    <td>example@gmail.com</td>
-    <td>Mail</td>
-    <td>Active</td>
+    <td><%= i+1 %></td>
+    <td><%= users[i].name %></td>
+    <td><%= users[i].email %></td>
+    <td><%= users[i].gender %></td>
+    <td><%= users[i].status %></td>
     <td>
-        <a href="/update_user" class="btn border-shadow update"><i class="fa-solid fa-pencil"></i></a>
+        <a href="/update_user?id=<%=users[i]._id%>" class="btn border-shadow update"><i class="fa-solid fa-pencil"></i></a>
         <a href="#" class="btn border-shadow delete"><i class="fa-solid fa-trash-can"></i></a>
     </td>
 </tr>
+<%}%>

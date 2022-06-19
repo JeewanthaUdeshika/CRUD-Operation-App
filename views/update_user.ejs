@@ -16,26 +16,26 @@
         </div>
 
         <!--form Handling-->
-        <form action="/" method="post" class="p-3">
+        <form method="post" class="p-3" id="update_user">
             <div class="form-outline mb-4">
                <label for="Name" class="form-label">Name</label>
                <input type="hidden" class="form-control" name="id" value="">
-               <input type="text" class="form-control" name="name" value="" placeholder="Jeewantha Udeshika">
+               <input type="text" class="form-control" name="name" value="<%=user.name%>" placeholder="Jeewantha Udeshika">
             </div>
             <div class="form-outline mb-4">
                 <label for="Email" class="form-label">Email</label>
-                <input type="text" class="form-control" name="email" value="" placeholder="example@sample.com">
+                <input type="text" class="form-control" name="email" value="<%=user.email%>" placeholder="example@sample.com">
              </div>
              <div class="form-outline mb-4">
                 <label for="gender" class="form-label">Gender &nbsp</label>
                 <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="Male">
+                    <input class="form-check-input" type="radio" name="gender" value="Male" <%= user.gender == 'Male'? 'checked':''%>>
                     <label class="form-check-label" for="Male">
                       Male
                     </label>
                   </div>
                   <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" value="Female">
+                    <input class="form-check-input" type="radio" name="gender" value="Female" <%= user.gender == 'Female'? 'checked':''%>>
                     <label class="form-check-label" for="Female">
                       Female
                     </label>
@@ -47,13 +47,13 @@
              <div class="form-outline mb-4">
                 <label for="Status" class="form-label">Status &nbsp</label>
                 <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="status" value="Active">
+                    <input class="form-check-input" type="radio" name="status" value="Active" <%= user.status == 'Active'? 'checked':''%>>
                     <label class="form-check-label" for="Active">
                       Active
                     </label>
                   </div>
                   <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="status" value="Inactive">
+                    <input class="form-check-input" type="radio" name="status" value="Inactive" <%= user.status == 'Inactive'? 'checked':''%>>
                     <label class="form-check-label" for="Inactive">
                       Inacive
                     </label>

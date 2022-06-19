@@ -28,11 +28,12 @@ exports.create = (req, res) =>{
     user
         .save(user)
         .then(data=>{
-            res.send(data)  // If saved in the data base, send saved data to user
+            // res.send(data)  // If saved in the data base, send saved data to user
+            res.redirect("/add_user");
         })
         .catch(err=>{
             res.status(500).send({
-                message: err.message || "Some error ocurred"
+                message: err.message+"j" || "Some error ocurred"
             });
         });
 }

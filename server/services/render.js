@@ -4,7 +4,7 @@
 
 // Export method for the index
 exports.homeRoutes = (req, res) => {
-    res.render('index');
+    res.render('index', {users: "New Data"});
 };
 
 // Export method for add user
